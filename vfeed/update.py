@@ -38,7 +38,6 @@ class vFeedUpdate(object):
             self._updateDB(self.urlCompressed)
             print '\n[info] decompressing %s ...' %self.vfeed_db_compressed
             self._uncompress()
-            self.cleaning()
             exit(0)
             
         if os.path.isfile(self.vfeed_db):
@@ -47,8 +46,8 @@ class vFeedUpdate(object):
     
     def _updateDB(self,url):
         '''
-        This function was found on internet.
-        So thanks to its author wherever he is.
+        The original function was found on internet.
+        I slighlty improved by adding progress percentage.
         '''
         
         self.filename = url.split('/')[-1]
@@ -87,7 +86,8 @@ class vFeedUpdate(object):
         try:
             tar = tarfile.open(self.vfeed_db_compressed, 'r:gz')
             tar.extractall('.')
-            self.tar.close            
+            tar.close
+            self.cleaning()
         except:
             print '[error] Database not extracted.'
          
@@ -103,11 +103,10 @@ class vFeedUpdate(object):
             self.hashRemote = self.output.split(',')[1]
         
         if self.hashRemote <> self.hashLocal:
-            print '[New Update] Downloading the recent vFeed Database %s from %s' %(self.vfeed_db_compressed,self.vfeed_db_primary_url)            
+            print '\n[New Update] Downloading the recent vFeed Database %s from %s' %(self.vfeed_db_compressed,self.vfeed_db_primary_url)            
             self._updateDB(self.urlCompressed)
             print '[info] Decompressing %s ...' %self.vfeed_db_compressed
             self._uncompress()
-            self.cleaning()
             exit(0)
             
         if self.hashRemote == self.hashLocal:
