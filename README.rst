@@ -61,11 +61,12 @@ Beta v0.4.7
 * Added the support to BID - SecurityFocus ids
 * Updated the Ubuntu, Redhat, CERT-VN mappers. Many new IDs have been added to vFeed.db
 * To reflect the newest cross references, the following methods have been added:
+
  - `get_hp` to enumerate HP ids. This function returns the patches alonside with links
  - `get_bid`to list SecurityFocus Ids
  - `update`to download the newest vFeed.db database. python vfeedcli.py update will do the trick now.
 
-° vfeed.db the sqlite opensource cross linked vulnerability database fully regenerated to support the new changes
+* vfeed.db the sqlite opensource cross linked vulnerability database fully regenerated to support the new changes
 * Documentation updated accordingly
 
 
@@ -77,10 +78,11 @@ Beta v0.4.6
 * Updated the Gentoo GLSA mapper. Many new IDs have been added to vFeed.db
 * Updated the Fedora mapper. Many new IDs have been added to vFeed.db
 * To reflect the newest cross references, the following methods have been added: 
+
  - `get_suricata` to enumerate Suricata ID rules. This function returns Suricata SID, signature title and class type
  - `get_vmware`to list VMware patches
 
-° vfeed.db the sqlite opensource cross linked vulnerability database fully regenerated to support the new changes
+* vfeed.db the sqlite opensource cross linked vulnerability database fully regenerated to support the new changes
  
 Beta v0.4.5
 ----------
@@ -111,7 +113,8 @@ Beta v0.4.0
 * Added the support to Ubuntu USN Security Notices (http://www.ubuntu.com/usn/)
 * Added the support to Gentoo GLSA http://www.gentoo.org/security/en/glsa/
 * Added the support to Fedora Security advisories (http://www.redhat.com/archives/fedora-announce-list/)
-* To reflect the newest cross references, the following new methods have been added
+* To reflect the newest cross references, the following new methods have been added:
+
  - `get_iavm` to check for DISA/IAVM ids associated with a CVE
  - `get_scip` to check for SCIP database ids
  - `get_certvn` to enumerate the CERT-VN ids
@@ -141,11 +144,13 @@ Beta v0.3.9
 the topAlert value is filled with categories name such as OWASP Top Ten 2010 Category A1 - Injection or 2011 Top 25 - Insecure Interaction Between Components
 * checkCVSS extended to support the CVSS Vector. 
 * To reflect the newest cross references, 3 new methods have been added
+
   - checkMSF to check for Metasploit sploits or plugins
   - checkCAPEC to enumerate the CWE associated (and indirectly CVE) CAPEC ids
   - checkCATEGORY to list the whole Top Categories associated with CWE and indirectly CVE. This method is useful if topAlert doesnt report any known Top List.
   - Updated checkRISK, checkCWE and checkCVSS
   - updated exportXML to reflect the changes.
+
 * vfeed.db regenerated from scratch to support the newest changes. 
 * Documentation as usual in progress.  
 
