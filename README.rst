@@ -62,9 +62,9 @@ Beta v0.4.7
 * Updated the Ubuntu, Redhat, CERT-VN mappers. Many new IDs have been added to vFeed.db
 * To reflect the newest cross references, the following methods have been added:
 
- - `get_hp` to enumerate HP ids. This function returns the patches alonside with links
- - `get_bid`to list SecurityFocus Ids
- - `update`to download the newest vFeed.db database. python vfeedcli.py update will do the trick now.
+  - `get_hp` to enumerate HP ids. This function returns the patches alonside with links
+  - `get_bid`to list SecurityFocus Ids
+  - `update`to download the newest vFeed.db database. python vfeedcli.py update will do the trick now.
 
 * vfeed.db the sqlite opensource cross linked vulnerability database fully regenerated to support the new changes
 * Documentation updated accordingly
@@ -79,8 +79,8 @@ Beta v0.4.6
 * Updated the Fedora mapper. Many new IDs have been added to vFeed.db
 * To reflect the newest cross references, the following methods have been added: 
 
- - `get_suricata` to enumerate Suricata ID rules. This function returns Suricata SID, signature title and class type
- - `get_vmware`to list VMware patches
+  - `get_suricata` to enumerate Suricata ID rules. This function returns Suricata SID, signature title and class type
+  - `get_vmware`to list VMware patches
 
 * vfeed.db the sqlite opensource cross linked vulnerability database fully regenerated to support the new changes
  
@@ -115,14 +115,14 @@ Beta v0.4.0
 * Added the support to Fedora Security advisories (http://www.redhat.com/archives/fedora-announce-list/)
 * To reflect the newest cross references, the following new methods have been added:
 
- - `get_iavm` to check for DISA/IAVM ids associated with a CVE
- - `get_scip` to check for SCIP database ids
- - `get_certvn` to enumerate the CERT-VN ids
- - `get_openvas` to list the OpenVAS Vulnerability scanner scripts. It always classy to have both Nessus and OpenVAS scripts ;)
- - `get_cisco` to list cisco patchs
- - `get_ubuntu` to list ubuntu patchs
- - `get_gento`. You bet, it's for listing the Gentoo patchs
- - `get_fedora` to list the fedora patchs
+  - `get_iavm` to check for DISA/IAVM ids associated with a CVE
+  - `get_scip` to check for SCIP database ids
+  - `get_certvn` to enumerate the CERT-VN ids
+  - `get_openvas` to list the OpenVAS Vulnerability scanner scripts. It always classy to have both Nessus and OpenVAS scripts ;)
+  - `get_cisco` to list cisco patchs
+  - `get_ubuntu` to list ubuntu patchs
+  - `get_gento`. You bet, it's for listing the Gentoo patchs
+  - `get_fedora` to list the fedora patchs
 
 * Despite the fact the OSVDB ids was already mapped with vFeed since the beginning, a new method `get_osvdb` has been added to enumerate them when available.
 * Added `get_milw0rm` method even if the website is deprecated (for old time's sake)
